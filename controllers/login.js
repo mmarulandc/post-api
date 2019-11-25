@@ -37,11 +37,11 @@ const login = async (req, res) => {
     console.log("La contraseña coincide");
     //se crea el token con el email y el id de usuario
     const token = jwt.sign(
-      { username: findedUser.username, password: findedUser.password },
+      { username: findedUser.username, password: findedUser.password, email:findedUser.email },
       "palabra_secreta_que_deberia_guardar_y_hashear_en_la_db",
       { expiresIn: "1h" }
     );
-
+      
     return res.status(200).json({
       message: "Ha ingresado con exito",
       token: token

@@ -1,11 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const sendPost = require("../controllers/sendPost");
-
+const getPost = require("../controllers/getPost");
+const deletePost = require("../controllers/deletePost")
+const auth = require("../middlewares/check-auth");
 /*************************
  **		END POINTS		**
  *************************/
 
-router.post("/sendpost", sendPost);
+router.post("/sendpost", auth, sendPost);
+router.get("/getpost/:userID",auth,getPost);
+router.delete("/deletepost/:postID",auth,deletePost)
 
 module.exports = router;

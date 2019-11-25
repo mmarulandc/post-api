@@ -14,5 +14,6 @@ const PostSchema = new Schema(
     timestamps: { createdAt: "created_at", updatedAt:"updated_at"}
   }
 );
+PostSchema.index({creator: 'text', content:'text'});
 
 module.exports = mongoose.model("Posts", PostSchema);
