@@ -5,7 +5,7 @@ const sendPost = async (req, res) => {
   singleUpload(req,res,(err)=>{
     if(req.file) {
       console.log("there is an image")
-      return res.json({'imageUrl':req.file.location})
+      return "<h2>Hola</h2>"
     }
   });
 };
