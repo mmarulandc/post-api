@@ -1,11 +1,13 @@
-const upload = require("../services/file-upload");
+const upload = require("../utils/file-upload");
 
 const singleUpload = upload.single("image");
 const sendPost = async (req, res) => {
+  console.log("hola")
   singleUpload(req,res,(err)=>{
+    console.log("hola")
     if(req.file) {
       console.log("there is an image")
-      return "<h2>Hola</h2>"
+      res.json({'imageUrl':req.file.location})
     }
   });
 };
