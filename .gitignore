@@ -3,9 +3,11 @@
 # dependencies
 /node_modules
 /config/secretFile.js
+/config/database.js
 /.pnp
 .pnp.js
 secretFile.js
+database.js
 # testing
 /coverage
 

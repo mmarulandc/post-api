@@ -4,7 +4,6 @@ const ObjectID = require('mongodb').ObjectID;
 
 const deletePost = async (req, res) => {
   try {
-    console.log('hols');
     let { postID } = req.params;
     let { userID } = req.body;
     if (userID === null || userID === undefined || !ObjectID.isValid(userID)) {

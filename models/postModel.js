@@ -5,15 +5,15 @@ const Schema = mongoose.Schema;
 
 const PostSchema = new Schema(
   {
-    creator: {required:true, type: Schema.Types.ObjectId, ref:'Users'},
+    creator: { required: true, type: Schema.Types.ObjectId, ref: "Users" },
     title: { type: String, unique: false, lowercase: true, required: true },
     content: { type: String, unique: false, lowercase: true, required: true },
     img: { type: String, required: false }
   },
   {
-    timestamps: { createdAt: "created_at", updatedAt:"updated_at"}
+    timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
   }
 );
-PostSchema.index({creator: 'text', content:'text'});
+PostSchema.index({ title: "text", content: "text" });
 
 module.exports = mongoose.model("Posts", PostSchema);

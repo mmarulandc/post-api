@@ -19,6 +19,4 @@ app.use((req, res, next) => {
   next(error);
 });
 
-app.listen(3000, () => {
-  console.log("Running in port 3000");
-});
+module.exports = app;

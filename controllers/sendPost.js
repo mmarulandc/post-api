@@ -51,18 +51,17 @@ const sendPost = async (req, res) => {
           creator: postSaved.creatorId,
           img: postSaved.img,
           content: postSaved.content,
-          title: postSaved.content
+          title: postSaved.title
         });
         await newPost.save();
       } else {
         newPost = new post({
           creator: postSaved.creatorId,
           content: postSaved.content,
-          title: postSaved.content
+          title: postSaved.title
         });
         await newPost.save();
       }
-      console.log(postSaved);
       return res.status(200).json({
         message: 'Post exitoso'
       });
