@@ -4,7 +4,8 @@
 /node_modules
 /config/secretFile.js
 /config/database.js
-/.pnp
+/.pnp'
+/.vscode
 .pnp.js
 secretFile.js
 database.js
