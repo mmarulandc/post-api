@@ -11,6 +11,11 @@
 
 ## Ejecutar proyecto
 `$ npm start`
+
+# Por obvias razones no subí las credenciales del cluster de MongoAtlas, ni tampoco las access key de aws
+
+# Heroku app
+### https://post-api-2019.herokuapp.com/api/
 ## End points 
 
 |Verbo |End point| Parametros:tipo |Obligatorio| 
